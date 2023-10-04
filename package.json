@@ -1,0 +1,29 @@
+{
+  "name": "graphql-server-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc -w",
+    "copy": "cp ./src/graphql/type-defs/schema.graphql ./dist/graphql/type-defs/schema.graphql",
+    "start": "concurrently \"npm run compile\" \"npm run copy\" \"nodemon ./dist/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@apollo/server": "^4.9.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "graphql": "^16.8.1",
+    "surrealdb.js": "^0.9.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.14",
+    "@types/node": "^20.8.2",
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
+  }
+}
